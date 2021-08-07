@@ -1,3 +1,9 @@
+// Bouncing DVD Logo
+// Daniel Shiffman
+// https://thecodingtrain.com/CodingChallenges/131-bouncing-dvd-logo.html
+// https://youtu.be/0j86zuqqTlQ
+// https://editor.p5js.org/codingtrain/sketches/Ya1K1ngtFk
+
 let x;
 let y;
 
@@ -6,53 +12,56 @@ let yspeed;
 
 let dvd;
 
-let r,g,b;
+let r, g, b;
 
-function preload(){
-    dvd = loadImage("C:/Users/helde/Desktop/DVD_screensaver/dvd_logo.png");
+function preload() {
+  dvd = loadImage("./download.jpeg");
 }
 
-function setup (){
-    createCanvas(windowWidth, windowHeight);
-    x = random(width);
-    y = random(height);
-    xspeed = 10;
-    yspeed = 10;
-    pickColor();
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+  x = random(width);
+  y = random(height);
+  xspeed = 5;
+  yspeed = 5;
+  pickColor();
+
+
 }
 
-function pickColor(){
-    r = random(100, 256);
-    g = random(100, 256);
-    b = random(100, 256);
+function pickColor() {
+  r = random(100, 256);
+  g = random(100, 256);
+  b = random(100, 256);
 }
 
-function draw(){
+function draw() {
     background(0);
-    //Rect(x, y, 80, 60);
+    // rect(x, y, 80, 60);
+    // Draw the DVD logo
     tint(r, g, b);
     image(dvd, x, y);
 
-    x = x + xspeed;
-    y = y + yspeed;
+  x = x + xspeed;
+  y = y + yspeed;
 
-    if (x + dvd.width >= width){
-        xspeed = -xspeed;
-        x = width - dvd.width;
-        pickColor();
-    }else if(x <= 0){
-        xspeed = -xspeed;
-        x = 0;
-        pickColor();
-    }
+  if (x + dvd.width >= width) {
+    xspeed = -xspeed;
+    x = width - dvd.width;
+    pickColor();
+  } else if (x <= 0) {
+    xspeed = -xspeed;
+    x = 0;
+    pickColor();
+  }
 
-    if  (y + dvd.height >= Height ){
-        yspeed = -yspeed;  
-        y = height - dvd.height;    
-        pickColor();  
-    }else if(y <= 0){
-        yspeed = -yspeed;
-        y = 0;
-        pickColor();
-    }
+  if (y + dvd.height >= height) {
+    yspeed = -yspeed;
+    y = height - dvd.height;
+    pickColor();
+  } else if (y <= 0) {
+    yspeed = -yspeed;
+    y = 0;
+    pickColor();
+  }
 }
