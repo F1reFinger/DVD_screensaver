@@ -9,7 +9,7 @@ let dvd;
 let r,g,b;
 
 function preload(){
-    dvd = loadImage('dvd_logo.png');
+    dvd = loadImage("C:/Users/helde/Desktop/DVD_screensaver/dvd_logo.png");
 }
 
 function setup (){
