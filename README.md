@@ -1,5 +1,4 @@
 <h1 align="center">DVD Screensaver</h1>
-<h2 align="center">	:construction: still working on.:construction:</h2>
 <br>
 <br>
 <div align="center">
