@@ -10,9 +10,11 @@
 
 <br>
 <br>
-<p>Final result:</p>
-<div align="center">
- <img alt="GIF" src="dvd.gif"/>
+<div align="center" >
+ <p>Final result:</p>
+ <div align="center">
+  <img alt="GIF" src="dvd.gif"/>
+ </div>
 </div>
 <br>
  
